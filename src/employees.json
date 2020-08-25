@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "name": "Frisk",
+        "role": "Human",
+        "department": "Surface",
+        "salary": 20
+    },
+    {
+        "id": 2,
+        "name": "Flowey",
+        "role": "Flower",
+        "department": "Ruins",
+        "salary": 50
+    },
+    {
+        "id": 3,
+        "name": "Toriel",
+        "role": "Teacher",
+        "department": "Ruins",
+        "salary": 14
+    },
+    {
+        "id": 4,
+        "name": "Sans",
+        "role": "Comedian",
+        "department": "Snowdin",
+        "salary": -7
+    },
+    {
+        "id": 5,
+        "name": "Papyrus",
+        "role": "Royal Guard Trainee",
+        "department": "Snowdin",
+        "salary": 5
+    },
+    {
+        "id": 6,
+        "name": "Undyne",
+        "role": "Royal Guard",
+        "department": "Waterfall",
+        "salary": 60
+    },
+    {
+        "id": 7,
+        "name": "Muffett",
+        "role": "Baker",
+        "department": "Hotlands",
+        "salary": 35
+    },
+    {
+        "id": 8,
+        "name": "Alphys",
+        "role": "Scientist",
+        "department": "Lab",
+        "salary": 100
+    },
+    {
+        "id": 9,
+        "name": "Mettaton",
+        "role": "Game Show Host",
+        "department": "Lab",
+        "salary": 85
+    },
+    {
+        "id": 10,
+        "name": "Asgore",
+        "role": "King",
+        "department": "New Home",
+        "salary": 120
+    }
+]
