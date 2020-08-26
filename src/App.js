@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 // import { ColumnHeader, Table, TableBody, TableHead, TableRow, Title, Wrapper } from "./components";
 import Button from "./components/Button";
 import ColumnHeader from "./components/ColumnHeader";
+import Form from "./components/Form";
 import Table from "./components/Table";
 import TableBody from "./components/TableBody";
 import TableHead from "./components/TableHead";
@@ -65,6 +66,7 @@ class App extends Component {
             ))}
           </TableBody>
         </Table>
+        <Form handleClick={this.filterTable}/>
         <Button handleClick={this.sortTable}>Sort</Button>
       </Wrapper>
     );
