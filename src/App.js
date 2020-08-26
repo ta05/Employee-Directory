@@ -1,5 +1,12 @@
 import React, {Component} from 'react';
-import { Table, TableBody, TableData, TableHead, TableHeader, TableRow, Title, Wrapper } from "./components";
+// import { ColumnHeader, Table, TableBody, TableHead, TableRow, Title, Wrapper } from "./components";
+import ColumnHeader from "./components/ColumnHeader";
+import Table from "./components/Table";
+import TableBody from "./components/TableBody";
+import TableHead from "./components/TableHead";
+import TableRow from "./components/TableRow";
+import Title from "./components/Title";
+import Wrapper from "./components/Wrapper";
 import employees from "./employees.json";
 import './App.css';
 
@@ -22,7 +29,7 @@ class App extends Component {
         <Title>Employee Table</Title>
         <Table>
           <TableHead>
-            <TableRow employee={this.state.header}/>
+            <ColumnHeader header={this.state.header}/>
           </TableHead>
 
           <TableBody>
