@@ -26,10 +26,24 @@ class App extends Component {
     order: 1
   };
 
+  handleInputChange = event => {
+    this.setState({
+      employees: employees,
+      header: this.state.header,
+      order: this.state.order
+    });
+
+    console.log(this.state.employees);
+
+    let department = event.target.value;
+    this.filterTable(department);
+  }
+
   filterTable = (department) => {
+
     this.setState({
       header: this.state.header,
-      employees: this.state.employees.filter(employee => employee.department === department),
+      employees: this.state.employees.filter(employee => employee.department.toLowerCase().includes(department.trim().toLowerCase())),
       order: this.state.order
     });
   }
@@ -66,8 +80,8 @@ class App extends Component {
             ))}
           </TableBody>
         </Table>
-        <Form handleClick={this.filterTable}/>
-        <Button handleClick={this.sortTable}>Sort</Button>
+        <Form handleInputChange={this.handleInputChange}/>
+        <Button handleClick={this.sortTable}>SORT</Button>
       </Wrapper>
     );
   }

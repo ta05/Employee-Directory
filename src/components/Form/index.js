@@ -1,20 +1,16 @@
-import React from "react";
-import Button from "../Button";
+import React, {useState} from "react";
 
-function Form({handleClick, children}) {
-    let name = "";
-    let department = "";
-
-    const handleInputChange = event => {
-        
-    }
+function Form(props) {
     return (
         <div>
             <form className="form">
                 <input
-                    
+                    value={props.value}
+                    name="department"
+                    className="form-control"
+                    placeholder="Enter a department to filter by"
+                    onChange={props.handleInputChange}
                 />
-                <Button handleClick={handleClick}>Filter</Button>
             </form>
         </div>
     )
