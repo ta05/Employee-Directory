@@ -1,7 +1,11 @@
 import React from "react";
 
 function Table(props) {
-    return <table className="table table-dark">{props.children}</table>;
+    const style = {
+        backgroundColor: "rgba(0,0,0,0)"
+    };
+
+    return <table className="table table-dark" style={style}>{props.children}</table>;
 }
 
 export default Table;

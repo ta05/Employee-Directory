@@ -23,6 +23,23 @@ class App extends Component {
     }
   };
 
+  filterTable = (department) => {
+    this.setState({
+      header: this.state.headers,
+      employees: this.state.employees.filter(employee => employee.department === department)
+    });
+  }
+
+  sortTable = () => {
+    this.setState({
+      header: this.state.headers,
+      employees: this.state.employees.sort(function (a, b) {
+        return a.salary - b.salary;
+      })
+    });
+    
+  }
+
   render() {
     return (
       <Wrapper>
