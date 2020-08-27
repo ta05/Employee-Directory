@@ -1,9 +1,9 @@
-import React, {useState} from "react";
+import React from "react";
 
 function Form(props) {
     return (
         <div>
-            <form className="form">
+            <form className="form" style={{width: "150%"}}>
                 <input
                     value={props.value}
                     name="department"

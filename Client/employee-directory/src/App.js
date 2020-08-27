@@ -1,4 +1,5 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+// import { BrowserRouter as Router, Route } from "react-router-dom";
 // import { ColumnHeader, Table, TableBody, TableHead, TableRow, Title, Wrapper } from "./components";
 import Button from "./components/Button";
 import ColumnHeader from "./components/ColumnHeader";
@@ -16,6 +17,7 @@ class App extends Component {
 
   state = {
     employees,
+    filtered: employees,
     header: {
       id: "ID",
       name: "Name",
@@ -27,11 +29,11 @@ class App extends Component {
   };
 
   handleInputChange = event => {
-    this.setState({
-      employees: employees,
-      header: this.state.header,
-      order: this.state.order
-    });
+    // this.setState({
+    //   employees: employees,
+    //   header: this.state.header,
+    //   order: this.state.order
+    // });
 
     console.log(this.state.employees);
 
@@ -43,7 +45,7 @@ class App extends Component {
 
     this.setState({
       header: this.state.header,
-      employees: this.state.employees.filter(employee => employee.department.toLowerCase().includes(department.trim().toLowerCase())),
+      filtered: this.state.employees.filter(employee => employee.department.toLowerCase().includes(department.trim().toLowerCase())),
       order: this.state.order
     });
   }
@@ -64,25 +66,25 @@ class App extends Component {
 
   render() {
     return (
-      <Wrapper>
-        <Title>Employee Table</Title>
-        <Table>
-          <TableHead>
-            <ColumnHeader header={this.state.header}/>
-          </TableHead>
+        <Wrapper>
+          <Title/>
+          <Table>
+            <TableHead>
+              <ColumnHeader header={this.state.header}/>
+            </TableHead>
 
-          <TableBody>
-            {this.state.employees.map(employee => (
-              <TableRow
-                key={employee.id}
-                employee={employee}
-              />
-            ))}
-          </TableBody>
-        </Table>
-        <Form handleInputChange={this.handleInputChange}/>
-        <Button handleClick={this.sortTable}>SORT</Button>
-      </Wrapper>
+            <TableBody>
+              {this.state.filtered.map(employee => (
+                <TableRow
+                  key={employee.id}
+                  employee={employee}
+                />
+              ))}
+            </TableBody>
+          </Table>
+          <Form handleInputChange={this.handleInputChange}/>
+          <Button handleClick={this.sortTable}>SORT</Button>
+        </Wrapper>
     );
   }
 }
