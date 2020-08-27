@@ -49,3 +49,7 @@ No License
 
 Credit to Brandon on the help for filtering the employees and to freeCodeCamp for their deployment guide to heroku
 
+## Images
+
+![Table](/Client/employee-directory/public/assets/images/screencapture-undertale-directory-herokuapp-com-1598504309823png)
+
