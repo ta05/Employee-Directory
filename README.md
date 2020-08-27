@@ -51,5 +51,5 @@ Credit to Brandon on the help for filtering the employees and to freeCodeCamp fo
 
 ## Images
 
-![Table](/Client/employee-directory/public/assets/images/screencapture-undertale-directory-herokuapp-com-1598504309823png)
+![Table](/Client/employee-directory/public/assets/images/screencapture-undertale-directory-herokuapp-com-1598504309823.png)
 
