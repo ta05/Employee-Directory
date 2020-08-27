@@ -56,7 +56,7 @@ class App extends Component {
     const order = this.state.order;
     this.setState({
       header: this.state.header,
-      employees: this.state.employees.sort(function (a, b) {
+      filtered: this.state.filtered.sort(function (a, b) {
         return (order < 0 ? b.salary - a.salary : a.salary - b.salary);
       }),
       order: -1 * this.state.order
